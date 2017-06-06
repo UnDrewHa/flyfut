@@ -1,0 +1,83 @@
+.footer
+  background $pale-gray
+  margin 20px 0 0
+  padding-bottom 60px
+
+  &-block
+    display flex
+    justify-content: space-between
+    align-items center
+    margin 0 auto
+    padding 7px 0
+    width 1280px
+  &__list
+    flex-grow 0
+    margin 0
+    padding 0
+
+    li
+      color $black
+      font 1.4rem/2.14 $lato
+      margin 0
+      list-style-type none
+      a
+        color inherit
+      &:first-child
+        color $royal
+        background url('../i/svg/icon_square.svg') 0 50% no-repeat
+        font-weight 600
+        padding 0 0 0 10px
+  &__address
+    color $black
+    font 1.4rem/1.74 $lato
+    flex-shrink 0
+    width 269px
+    svg
+      height 36px
+      margin 10px 0 0
+      width 139px
+  &__social
+    align-self: flex-start;
+    width 381px
+    .ya-market
+      height 55px
+      width 381px
+    .social-links
+      display -webkit-flex
+      display -ms-flex
+      display flex
+      justify-content space-between
+      align-items center
+      p
+        color $bluey-grey
+        font 1.4rem/1.41 $lato
+        margin 0
+      div
+        font-size 0
+        line-height 0
+        a
+          display inline-block
+          height 30px
+          width 30px
+          & + a
+            margin 0 0 0 10px
+          &._fb
+            background #4460a0 url('../i/svg/icon_fb.svg') 50% no-repeat
+          &._vk
+            background #4c75a3 url('../i/svg/icon_vk.svg') 50% no-repeat
+  &__tece-small
+    background url('../i/svg/tece_small.png') 50% no-repeat
+    background-size: cover
+    flex-shrink 0
+    height 14px
+    width 48px
+  &__copyright
+    color $bluey-grey
+    font 1.4rem/2 $lato
+    flex-grow 1
+    margin 0
+    padding 0 0 0 10px
+  &__small-logo
+    background url('../i/svg/logo_small.svg') 50% no-repeat
+    height 30px
+    width 30px
