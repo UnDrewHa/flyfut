@@ -1,11 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="30" height="65" viewBox="0 0 30 65">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #ed7900;
-        fill-rule: evenodd;
-      }
-    </style>
-  </defs>
-  <path d="M4.985,32.738 L29.678,63.447 L25.934,64.999 L0.000,32.746 L0.610,32.493 L0.290,32.360 L26.258,0.001 L30.006,1.558 L4.985,32.738 Z" class="cls-1"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 30 65" style="enable-background:new 0 0 30 65;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#ED7900;}
+</style>
+<polygon class="st0" points="30,1.6 26.3,0 0,32.6 25.9,65 29.7,63.4 5,32.7 "/>
 </svg>

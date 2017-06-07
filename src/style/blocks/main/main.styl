@@ -9,7 +9,7 @@ body
     width 1060px
     @media (max-width: 1100px)
       max-width 1000px
-      width auto  
+      width auto
 
 .main
   background url('../i/main_bg.jpg') 50% 0 no-repeat
@@ -20,7 +20,7 @@ body
     height auto
     padding 10% 0 30%
 .flyfut-logo
-  background url('../i/flyfut_logo.png') 50% 0 no-repeat
+  background url('../i/flyfut_logo.svg') 50% 0 no-repeat
   background-size contain
   color #fff
   font 1.9rem/1 $headers
@@ -38,31 +38,29 @@ body
 .slider1
   height 190px
   transform translateY(-35px)
+  background #fff
+  display block
+  margin 0 auto
+  padding 20px
+  width 940px
+  @media (max-width: 1020px)
+    width 640px
+  @media (max-width: 767px)
+    width 330px
+  @media (max-width: 460px)
+    padding 10px
+    width 85%
+  *
+    outline none
   @media (max-width: 460px)
     height auto
-  &__wrap
-    background #fff
-    display block
-    margin 0 auto
-    padding 20px
-    width 940px
-    @media (max-width: 1020px)
-      width 640px
-    @media (max-width: 767px)
-      width 330px
-    @media (max-width: 460px)
-      padding 10px
-      width 85%
   &__item
-    width 290px
+    display block
     img
       width 100%
-    & + .slider1__item
-      margin-left 15px
-      @media (max-width: 767px)
-        margin-left 0
-      
-.slider-arrow
+
+.owl-prev,
+.owl-next
   position absolute
   top 50%
   cursor pointer
@@ -72,45 +70,47 @@ body
   transition all .3s ease
   width 80px
   z-index 1
+  background-position 50%
+  background-repeat: no-repeat
+  background-size 30px 65px
   @media (max-width: 1100px)
     width 30px
-.slick-prev
-  left 0
-  background url('../i/prev.svg') 50% no-repeat
-  @media (max-width: 1020px)
-    left 20px
+  @media (max-width: 767px)
+    background-size contain
+    width 20px
+.owl-prev
+  left -80px
+  background-image url('../i/prev.svg')
+  @media (max-width: 1100px)
+    left -35px
   @media (max-width: 460px)
-    left 5px
+    left -20px
   &:hover
     transform translateX(-12px)
     @media (max-width: 1100px)
       transform none
-.slick-next
-  right 0
-  background url('../i/next.svg') 50% no-repeat
-  @media (max-width: 1020px)
-    right 20px
+.owl-next
+  right -80px
+  background-image url('../i/next.svg')
+  @media (max-width: 1100px)
+    right -35px
   @media (max-width: 460px)
-    right 5px
+    right -20px
   &:hover
     transform translateX(12px)
     @media (max-width: 1100px)
         transform none
-    
+
 .record
   margin 1rem 0 0
   h2
-    margin-left auto
-    margin-right auto
     margin-top 0
-    max-width 560px
   p
     margin-left auto
     margin-right auto
     max-width 740px
     text-align center
-      
-  
+
 h2
   font 3rem/1 $headers
   margin 0 0 0.85em
@@ -118,17 +118,19 @@ h2
   text-align center
   text-transform uppercase
   @media (max-width: 767px)
-    font-size 2.8rem
+    font-size 2.4rem
 h3
   font 2.4rem/1 $roboto
   margin .65em 0
   padding 0 15px
   @media (max-width: 767px)
-    font-size 2.2rem
+    font-size 2rem
 p
   font 1.6rem/2.2rem $roboto
   margin 1em 0 0
   padding 0 15px
+  @media (max-width: 767px)
+    font-size 1.4rem
 ul
   margin 2rem 0 0
   padding 0
@@ -150,6 +152,8 @@ li
   font 1.6rem/2.2rem $roboto
   margin .2em 0 0
   padding 0
+  @media (max-width: 767px)
+    font-size 1.4rem
 
 .video
   background #000
@@ -158,6 +162,14 @@ li
   position relative
   width 900px
   z-index 2
+  iframe
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    height 100%
+    width 100%
   @media (max-width 920px)
     height 0
     padding-bottom 51.3%
@@ -191,24 +203,29 @@ li
         height 18px
         margin -9px 0 0 -7px
         width 18px
-        
-    
+
+
 
 .experience
   margin 8rem 0 0
   position relative
+  @media (max-width: 767px)
+    margin-top 5rem
   .row__inner
     padding 0 0 9.4rem 320px
     @media (max-width: 1020px)
-      padding-left 0
+      padding 0 15px 5rem
   h2
     text-align left
     @media (max-width: 1020px)
       text-align center
+  h2, h3, p
+    padding 0
   &__block
     margin 4rem 0 0
     max-width 560px
     position relative
+
     @media (max-width: 1020px)
       max-width 100%
       ul
@@ -225,9 +242,9 @@ li
     z-index 1
     @media (max-width: 1020px)
       display none
-    
+
 .parallax
-  background #000
+  background transparent
   height 355px
   position relative
   @media (max-width: 660px)
@@ -237,18 +254,20 @@ li
     top 50%
     left 0
     right 0
-    background url('../i/parallax_logo.png') 50% no-repeat
+    background url('../i/flyfut_logo.svg') 50% no-repeat
     background-size contain
-    height 174px    
+    height 174px
     margin -87px auto 0
     width 276px
     @media (max-width: 660px)
       height 27.6vw
       margin-top -13.8vw
       width 43.7vw
-    
+
 .customization
   margin 6.5rem 0 0
+  @media (max-width: 767px)
+    margin-top 5rem
   &-list
     display flex
     flex-wrap wrap
@@ -263,6 +282,7 @@ li
       @media (max-width: 1020px)
         width 30%
       @media (max-width: 850px)
+        margin-top 3rem
         width 48%
       @media (max-width: 650px)
         width 100%
@@ -275,7 +295,7 @@ li
         @media (max-width: 850px)
           margin-left 4%
         @media (max-width: 650px)
-          margin-left 0  
+          margin-left 0
       &:nth-child(3n + 1)
         @media (min-width: 851px)
           margin-left 0
@@ -283,47 +303,44 @@ li
         @media (max-width: 850px)
           margin-left 0
       h3
-        margin-top 0  
-        
+        margin-top 0
+
 
 
 .customization-slider
   height 190px
   position relative
+  background #fff
+  display block
+  margin 3.5rem auto 0
+  padding 20px
+  width 940px
+  @media (max-width: 1020px)
+    width 640px
+  @media (max-width: 767px)
+    width 330px
+  @media (max-width: 460px)
+    padding 10px
+    width 85%
+  *
+    outline none
   @media (max-width: 460px)
     height auto
-  &__wrap
-    background #fff
-    display block
-    margin 0 auto
-    padding 20px
-    width 940px
-    @media (max-width: 1020px)
-      width 640px
-    @media (max-width: 767px)
-      width 330px
-    @media (max-width: 460px)
-      padding 10px
-      width 85%
   &__item
-    width 290px
+    display block
     img
       width 100%
-    & + .customization-slider__item
-      margin-left 15px
-      @media (max-width: 767px)
-        margin-left 0  
-      
+
 
 .particular
   margin 5rem 0 0
   text-align center
   .small
     margin 4.2rem 0 4.5rem
-  
+
 .double-space
-  margin 2.3em 0
-  
+  margin-bottom 2.3em
+
 .footer
   background #000
 .copyright
@@ -331,3 +348,10 @@ li
   font-size 1.4rem
   padding 5.8rem 0
   text-align center
+  a
+    color #fff
+    text-decoration underline
+    transition color .2s ease
+    &:hover, &:active
+      color #ed7900
+      text-decoration none

@@ -104,10 +104,10 @@
 .mfp-s-error .mfp-content {
   display: none; }
 
-button.mfp-close,
-button.mfp-arrow {
+button.mfp-close {
   overflow: visible;
   cursor: pointer;
+  background: transparent;
   border: 0;
   -webkit-appearance: none;
   display: block;
@@ -116,22 +116,33 @@ button.mfp-arrow {
   z-index: 1046;
   box-shadow: none;
   touch-action: manipulation; }
+  button.mfp-arrow {
+    overflow: visible;
+    cursor: pointer;
+    border: 0;
+    -webkit-appearance: none;
+    display: block;
+    outline: none;
+    padding: 0;
+    z-index: 1046;
+    box-shadow: none;
+    touch-action: manipulation; }
 
 button::-moz-focus-inner {
   padding: 0;
   border: 0; }
 
 .mfp-close {
-  width: 30px;
-  height: 30px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
   position: absolute;
-  right: 10px;
-  top: 10px;
-  background url('../i/close.svg') 100% 0 no-repeat
+  right: 0;
+  top: 0;
   text-decoration: none;
   text-align: center;
-  opacity: 1
-  padding: 0;
+  opacity: 0.65;
+  padding: 0 0 18px 10px;
   color: #FFF;
   font-style: normal;
   font-size: 28px;
@@ -139,6 +150,8 @@ button::-moz-focus-inner {
   .mfp-close:hover,
   .mfp-close:focus {
     opacity: 1; }
+  .mfp-close:active {
+    top: 1px; }
 
 .mfp-close-btn-in .mfp-close {
   color: #333; }
@@ -146,7 +159,9 @@ button::-moz-focus-inner {
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
   color: #FFF;
+  right: -6px;
   text-align: right;
+  padding-right: 6px;
   width: 100%; }
 
 .mfp-counter {
@@ -160,39 +175,53 @@ button::-moz-focus-inner {
 
 .mfp-arrow {
   position: absolute;
-  opacity: 1
   margin: 0;
   top: 50%;
-  margin-top: -43px;
+  margin-top: -55px;
   padding: 0;
-  width: 80px;
-  height: 86px;
-  transition transform .3s ease
+  width: 90px;
+  height: 110px;
   -webkit-tap-highlight-color: transparent; }
   .mfp-arrow:active {
-    margin-top: -43px; }
+    margin-top: -54px; }
   .mfp-arrow:hover,
   .mfp-arrow:focus {
-    opacity: 1;
-
-  }
-
+    opacity: 1; }
+  .mfp-arrow:before,
+  .mfp-arrow:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent; }
+  .mfp-arrow:after {
+    top: 8px; }
+  .mfp-arrow:before {
+    opacity: 0.7; }
 
 .mfp-arrow-left {
-  background url('../i/prev.png') 50% no-repeat
-  background-size contain
-  left: 20px; }
-.mfp-arrow-left:hover {
-  transform: translateX(20px)
+  background transparent url('../i/prev.svg') 50% no-repeat
+  background-size 30px auto
+  left: 0;
+  @media (max-width: 767px) {
+    background-size 20px auto
   }
 
+}
+
 .mfp-arrow-right {
-  background url('../i/next.png') 50% no-repeat
-  background-size contain
-  right: 20px; }
-  .mfp-arrow-right:hover {
-    transform: translateX(-20px)
-    }
+  background transparent url('../i/next.svg') 50% no-repeat
+  background-size 30px auto
+  right: 0;
+  @media (max-width: 767px) {
+    background-size 20px auto
+  }
+}
 
 .mfp-iframe-holder {
   padding-top: 40px;
@@ -227,7 +256,7 @@ img.mfp-img {
   display: block;
   line-height: 0;
   box-sizing: border-box;
-  padding: 60px 0
+  padding: 40px 0 40px;
   margin: 0 auto; }
 
 /* The shadow behind the image */
@@ -237,8 +266,8 @@ img.mfp-img {
     content: '';
     position: absolute;
     left: 0;
-    top: 60px;
-    bottom: 60px;
+    top: 40px;
+    bottom: 40px;
     display: block;
     right: 0;
     width: auto;
@@ -252,36 +281,7 @@ img.mfp-img {
     font-size: 12px;
     line-height: 14px; }
   .mfp-figure figure {
-
-    margin: 0;
-    position: relative;
-
-  }
-
-  .mfp-figure figure::before {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    bottom: 60px;
-    border 20px solid #fff;
-    content ''
-    display block
-    pointer-events: none;
-  }
-
-  .mfp-figure figure::after {
-    position: absolute;
-    top: 50px;
-    left: 0
-    right: 0
-    background #e43d47
-    content ''
-    display block
-    height 10px
-    pointer-events: none;
-  }
-
+    margin: 0; }
 
 .mfp-bottom-bar {
   margin-top: -36px;
@@ -338,7 +338,7 @@ img.mfp-img {
     width: 35px;
     height: 35px;
     line-height: 35px;
-    background: rgba(0, 0, 0, 0.6)
+    background: rgba(0, 0, 0, 0.6);
     position: fixed;
     text-align: center;
     padding: 0; } }

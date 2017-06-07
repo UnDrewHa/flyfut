@@ -6,36 +6,33 @@ html
       .flyfut-logo
     .row
       .row__inner
-        .slider1
-          .slider1__prev.slider-arrow.slick-prev
-          .slider1__next.slider-arrow.slick-next
-          .slider1__wrap(data-slick='{"slidesToShow":3,"slidesToScroll":3,"infinite":"true","variableWidth":true,"dots":false,"arrows":true,"prevArrow":".slider1__prev","nextArrow":".slider1__next", "responsive":[{"breakpoint":1020,"settings":{"slidesToShow":2,"slidesToScroll":2}},{"breakpoint":767,"settings":{"slidesToShow":1,"slidesToScroll":1}},{"breakpoint":460,"settings":{"slidesToShow":1,"slidesToScroll":1,"variableWidth":false}}]}')
-            .slider1__item
-              img(src='https://dummyimage.com/290x150/000/fff' alt='')
-            .slider1__item
-              img(src='https://dummyimage.com/290x150/369/fff' alt='')
-            .slider1__item
-              img(src='https://dummyimage.com/290x150/693/fff' alt='')
-            .slider1__item
-              img(src='https://dummyimage.com/290x150/963/fff' alt='')
-            .slider1__item
-              img(src='https://dummyimage.com/290x150/ccc/fff' alt='')
-            .slider1__item
-              img(src='https://dummyimage.com/290x150/257/fff' alt='')
-            .slider1__item
-              img(src='https://dummyimage.com/290x150/963/fff' alt='')
-            .slider1__item
-              img(src='https://dummyimage.com/290x150/ccc/fff' alt='')
-            .slider1__item
-              img(src='https://dummyimage.com/290x150/257/fff' alt='')
+        .slider1.owl-carousel
+            a(href='../i/slide1.jpeg').slider1__item
+              img(src='../i/slide1.jpeg' alt='')
+              
+            a(href='../i/slide2.jpeg').slider1__item
+              img(src='../i/slide2.jpeg' alt='')
+              
+            a(href='../i/slide3.jpeg').slider1__item
+              img(src='../i/slide3.jpeg' alt='')
+              
+            a(href='../i/slide4.jpeg').slider1__item
+              img(src='../i/slide4.jpeg' alt='')
+              
+            a(href='../i/slide5.jpeg').slider1__item
+              img(src='../i/slide5.jpeg' alt='')
+              
+            a(href='../i/slide6.jpeg').slider1__item
+              img(src='../i/slide6.jpeg' alt='')
+              
                 
     .row.record
       .row__inner
         h2 GRABAMOS Y EDITAMOS TU PARTIDO
         p Este es un ejemplo de los partidos que grabamos. Con Pilotos de Drone y Equipo de edición profesionales hacemos magia, nos esforzamos en recoger lo mejor de cada partido, los detalles de crack, de fiera, de fuera de serie en un video resumen de 5 minutos.
-        .video
-          .video-btn
-          .video__container
+        .video.
+          <iframe src="https://www.youtube.com/embed/UlFHdsQq9J8" frameborder="0" allowfullscreen></iframe>
+            //- img(src='../i/video.jpg' alt='video placeholder')
     .row.experience
       .row__inner
         h2 UNA EXPERIENCIA ÚNICA
@@ -53,7 +50,7 @@ html
             li Queremos que sepas lo que se siente al ser una verdadera estrella en la pantalla.
             li Queremos que guardes ese golazo, ese pase o esa parada y lo compartas con tus amigos siempre que quieras
         
-    .row.parallax
+    .row.parallax(data-parallax="scroll" data-image-src="./i/img_parallax.jpg")
       .parallax-logo
     .row.customization
       .row__inner
@@ -77,40 +74,36 @@ html
           li
             h3 REPETICIONES
             p Podrás ver una y otra vez tus mejores jugadas, ese penalty que fue y no pitaron, esa mano que el arbitro no vio, ese gol fantasma...
-        .customization-slider
-          .customization-slider__prev.slider-arrow.slick-prev
-          .customization-slider__next.slider-arrow.slick-next
-          .customization-slider__wrap(data-slick='{"slidesToShow":3,"slidesToScroll":3,"infinite":"true","variableWidth":true,"dots":false,"arrows":true,"prevArrow":".customization-slider__prev","nextArrow":".customization-slider__next", "responsive":[{"breakpoint":1020,"settings":{"slidesToShow":2,"slidesToScroll":2}},{"breakpoint":767,"settings":{"slidesToShow":1,"slidesToScroll":1}},{"breakpoint":460,"settings":{"slidesToShow":1,"slidesToScroll":1,"variableWidth":false}}]}')
-            .customization-slider__item
-              img(src='https://dummyimage.com/290x150/000/fff' alt='')
-            .customization-slider__item
-              img(src='https://dummyimage.com/290x150/369/fff' alt='')
-            .customization-slider__item
-              img(src='https://dummyimage.com/290x150/693/fff' alt='')
-            .customization-slider__item
-              img(src='https://dummyimage.com/290x150/936/fff' alt='')
-            .customization-slider__item
-              img(src='https://dummyimage.com/290x150/257/fff' alt='')
-            .customization-slider__item
-              img(src='https://dummyimage.com/290x150/162/fff' alt='')
-            .customization-slider__item
-              img(src='https://dummyimage.com/290x150/936/fff' alt='')
-            .customization-slider__item
-              img(src='https://dummyimage.com/290x150/257/fff' alt='')
-            .customization-slider__item
-              img(src='https://dummyimage.com/290x150/162/fff' alt='')
+        .customization-slider.owl-carousel
+            a(href='../i/slide1.jpeg').customization-slider__item
+              img(src='../i/slide1.jpeg' alt='')
+              
+            a(href='../i/slide2.jpeg').customization-slider__item
+              img(src='../i/slide2.jpeg' alt='')
+              
+            a(href='../i/slide3.jpeg').customization-slider__item
+              img(src='../i/slide3.jpeg' alt='')
+              
+            a(href='../i/slide4.jpeg').customization-slider__item
+              img(src='../i/slide4.jpeg' alt='')
+              
+            a(href='../i/slide5.jpeg').customization-slider__item
+              img(src='../i/slide5.jpeg' alt='')
+              
+            a(href='../i/slide6.jpeg').customization-slider__item
+              img(src='../i/slide6.jpeg' alt='')
                 
                 
     .row.particular
       .row__inner
-        h2 ¿Eres un particular?
+        h3 ¿Eres un particular?
         p.double-space Llámanos o escríbenos aquí y dinos donde y cuando quieres que grabemos el partido de tu equipo.
         h3 ¿Representas a una liga?
         p Si representas a una liga, y superas los mínimos de calidad, podréis pertenecer al grupo de las mejores ligas de futbol amateur de España. Contrata el servicio de grabación con cámara drone y posiciona tu liga en lo mas alto, recluta mas equipos, aumenta la participación y aumenta tus beneficios. Todos querrán jugar en tu liga!
         p.small TU ERES EL CRACK
     .row.footer
       .row__inner
-        p.copyright Copyright © 2015 fly-fut - All Rights Reserved.
+        p.copyright Contacto : <a href='mailto:luis@flu-fut.com'>luis@flu-fut.com</a>.<br/>Copyright © 2015 fly-fut - All Rights Reserved.
 
     script(src='js/main.js')
 
